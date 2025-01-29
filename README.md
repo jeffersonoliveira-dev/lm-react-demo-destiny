@@ -1,1 +1,1 @@
-# -lm-jquery-demo-destiny
+# lm-react-demo-destiny
