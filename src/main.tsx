@@ -1,10 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { TodoProvider } from './components/TodoContext';
+import TodoList from './components/TodoList';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const App: React.FC = () => (
+  <TodoProvider>
+    <TodoList />
+  </TodoProvider>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
